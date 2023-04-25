@@ -1,0 +1,14 @@
+extends layout 
+
+block content 
+    h1= title
+
+    a(href='/') Home
+    
+    form(method='POST', action='/new')
+        p Author:
+        input(type='text' name='author')
+        p Message:
+        input(type='text' name='message')
+        <br>
+        input(type='submit')

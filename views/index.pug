@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  - var url = 'new';
+  a(href='/' + url) New Message
+
+  <br>
+
+  each msg in messages
+    p=msg.text
+    p=msg.user
+    p=msg.added 
+    <br>
